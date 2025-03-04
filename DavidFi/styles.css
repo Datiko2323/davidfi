@@ -1,0 +1,442 @@
+/* General Styles */
+:root {
+    --primary-color: orange;
+    --secondary-color: #FFF5E6;
+    --font-family: 'Arvo', serif;
+    --font-size-large: 36px;
+    --font-size-medium: 24px;
+    --font-size-small: 16px;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+  }
+  
+  .container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header Styles */
+  .header {
+    width: 100%;
+    height: 250px;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Logo Styles */
+  .logo {
+    position: absolute;
+    left: 30px;
+  }
+  
+  .logo img {
+    width: full;
+    height: full;
+    margin-top: -90px;
+  }
+  
+  /* Navigation Styles */
+  .navbar {
+    position: absolute;
+    left: 430px; /* 30px (logo left) + 300px (logo width) + 70px (gap) */
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 40px; /* Gap between navigation items */
+  }
+  
+  .navbar ul li a {
+    font-size: var(--font-size-large);
+    color: #000;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .navbar ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -17px; /* 17px down from the navigator */
+    width: 100%; /* Full width of the navigation item */
+    height: 3px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar ul li a:hover::after {
+    background-color: var(--primary-color);
+  }
+  
+  /* Contact Us Button Styles */
+  .contact-btn {
+    position: absolute;
+    right: 50px; /* Match this with the Home Page */
+    top: 45%;
+  
+  }
+  
+  .contact-btn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 70px;
+    background-color: var(--primary-color);
+    font-size: var(--font-size-large);
+    color: #000;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .contact-btn a:hover {
+    background-color: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+  }
+  
+  /* Hero Section Styles */
+  .hero {
+    height: 1200px;
+    background-image: url('images/home/moneyphoto.png'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  /* Small Section Inside Hero */
+  .hero-content {
+    position: absolute;
+    top: 80px; /* 80px from the top */
+    left: 80px; /* 80px from the left */
+    width: 900px;
+    height: 550px;
+    background-color: white;
+    padding: 40px;
+    box-sizing: border-box;
+  }
+  
+  .hero-text p {
+    font-size: var(--font-size-medium);
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Contact Us Button Inside Hero */
+  .hero-contact-btn {
+    margin-top: 40px; /* Space between text and button */
+  }
+  
+  .hero-contact-btn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 70px;
+    background-color: var(--primary-color);
+    font-size: var(--font-size-large);
+    color: #000;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .hero-contact-btn a:hover {
+    background-color: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+  }
+  
+  /* Why Choose Us Section Styles */
+  .why-choose-us {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .why-choose-us h2 {
+    font-family: var(--font-family);
+    font-size: 64px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .section-description {
+    font-size: var(--font-size-small);
+    color: #666;
+    margin-bottom: 40px;
+  }
+  
+  .why-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .card {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .card h3 {
+    font-family: var(--font-family);
+    font-size: var(--font-size-large);
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .card p {
+    font-family: var(--font-family);
+    font-size: var(--font-size-large);
+    font-weight: normal; /* Not bold */
+    color: #666;
+    line-height: 1.6;
+  }
+  
+ /* Footer Styles */
+.footer {
+    background-color: rgba(255, 165, 0, 0.25); /* Orange with 25% opacity */
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .footer h2 {
+    font-family: 'Arvo', serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .footer-content {
+    font-family: 'Arvo', serif;
+    font-size: 24px;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .footer-content p {
+    margin: 10px 0;
+  }
+  
+  .footer-content strong {
+    font-weight: bold;
+  }
+  /* Why Choose Us Section Styles */
+.why-choose-us {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.why-choose-us h2 {
+  font-family: 'Arvo', serif;
+  font-size: 64px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.section-description {
+  font-family: 'Arvo', serif;
+  font-size: 24px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Cards Styles */
+.why-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.card {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-family: 'Arvo', serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card p {
+  font-family: 'Arvo', serif;
+  font-size: 24px;
+  font-weight: normal; /* Not bold */
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Special Section for 6 Photos */
+.photo-section {
+  text-align: center;
+}
+
+.photo-section h3 {
+  font-family: 'Arvo', serif;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.photo-description {
+  font-family: 'Arvo', serif;
+  font-size: 24px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px;
+}
+
+.photo-grid img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+  
+/* Contact Us Section */
+.contact {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.contact h2 {
+  font-family: 'Arvo', serif;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-description {
+  font-family: 'Arvo', serif;
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Arvo', serif;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 15px;
+  background-color: orange;
+  color: black;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: white;
+  color: orange;
+  border: 2px solid orange;
+}
+
+/* Google Maps */
+.map {
+  flex: 1;
+}
+
+.map iframe {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Active Navbar Link */
+.navbar ul li a.active {
+  font-weight: bold;
+  color: orange;
+}
+
+
